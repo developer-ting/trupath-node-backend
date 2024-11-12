@@ -3,8 +3,7 @@ import fileUpload from "express-fileupload";
 import cors from "cors";
 import morgan from "morgan";
 import connect from "./db/connection.js";
-import router from "./routes/route.js";
-import routes from "./routes/route.js";
+import router from "./router/route.js";
 
 const app = express();
 
@@ -23,7 +22,7 @@ app.get("/", (req, res) => {
 });
 
 // api routes
-app.use("/api", routes);
+app.use("/api", router);
 
 // Start server only when we have valid connection
 connect()
