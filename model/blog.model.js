@@ -7,7 +7,19 @@ export const BlogsSchema = new mongoose.Schema({
   description: {
     type: String,
   },
-  thumbnail: { type: String, required: true, ref: "Media" },
+  thumbnail: { type: String, ref: "Media" },
+  content: {
+    type: String,
+  },
+  slug: {
+    type: String,
+  },
+  date: {
+    type: String,
+  },
+  readTime: {
+    type: String,
+  },
 });
 
 export default mongoose.model.Blogs || mongoose.model("Blog", BlogsSchema);
